@@ -24,13 +24,13 @@ cppcheck:
 	cppcheck --enable=all --error-exitcode=1 *.cpp *.h
 
 valgrind: monteCarlo
-	valgrind --leak-check=full --error-exitcode=1 -v ./monteCarlo
+	valgrind --leak-check=full --show-leak-kinds=all --error-exitcode=1 -v ./monteCarlo testInput.txt
 
 cloc:
 	cloc *.{cpp,h}
 
 run: test
-	time ./monteCarlo
+	time ./monteCarlo testInput.txt
 
 clean:
 	rm -f *.o monteCarlo
