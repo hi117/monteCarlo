@@ -106,8 +106,8 @@ int main(int argc, char** argv) {
     // Find the error
     sigmaBar = sqrt(sum / static_cast<double>(num * (num - 1)));
     free(randomInput);
-    printf("Estimate of pi: %e+%e\n",
-            static_cast<double>(numerator) / static_cast<double>(num) * 4.0,
+    printf("Estimate of pi: %f+%e\n",
+            static_cast<double>(numerator) / static_cast<double>(num) * 8,
             sigmaBar);
     return 0;
 }
